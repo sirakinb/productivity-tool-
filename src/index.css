@@ -1,0 +1,40 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+@media (max-width: 640px) {
+  .week-view {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .week-view::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+  }
+
+  .day-column {
+    scroll-snap-align: start;
+  }
+}
+
+/* Adjust main content to account for bottom nav on mobile */
+@media (max-width: 768px) {
+  .app main {
+    padding-bottom: 4rem;
+  }
+}
+
+/* Comment out the rest of the CSS for now */
+
+html, body, #root {
+  min-height: 100vh;
+  background-color: #111827; /* This is the tailwind bg-gray-900 color */
+}
+
+body {
+  overflow-x: hidden;
+}
